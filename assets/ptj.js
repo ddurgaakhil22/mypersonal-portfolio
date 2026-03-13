@@ -146,7 +146,8 @@ window.addEventListener("scroll", scrollUp);
 const themeButton = document.getElementById("theme-button");
 const darkTheme = "dark-theme";
 const iconTheme = "uil-sun";
-
+// Default dark mode
+document.body.classList.add("dark-theme")
 // Previously selected topic (if user selected)
 const selectedTheme = localStorage.getItem("selected-theme");
 const selectedIcon = localStorage.getItem("selected-icon");
@@ -187,3 +188,6 @@ behavior: "smooth"
 });
 });
 });
+if(!localStorage.getItem("selected-theme")){
+localStorage.setItem("selected-theme","dark")
+}
