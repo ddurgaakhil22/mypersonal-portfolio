@@ -1,106 +1,45 @@
+// Mobile Menu Toggle
 const navMenu = document.getElementById("nav-menu"),
-  navToggle = document.getElementById("nav-toggle");
-navClose = document.getElementById("nav-close");
+  navToggle = document.getElementById("nav-toggle"),
+  navClose = document.getElementById("nav-close");
+
+// Validate if constant exists
 if (navToggle) {
   navToggle.addEventListener("click", () => {
-    navMenu.classList.add("show-menu");
+    navMenu.classList.toggle("show-menu");
+    const icon = navToggle.querySelector("i");
+    if (icon) {
+      if (navMenu.classList.contains("show-menu")) {
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-xmark");
+      } else {
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+      }
+    }
   });
 }
 
-if (navClose) {
-  navClose.addEventListener("click", () => {
-    navMenu.classList.remove("show-menu");
-  });
-}
-
-/*==================== REMOVE MENU MOBILE ====================*/
+// Close Menu on Link Click
 const navLink = document.querySelectorAll(".nav__link");
 
 function linkAction() {
   const navMenu = document.getElementById("nav-menu");
-  // When we click on each nav__link, we remove the show-menu class
   navMenu.classList.remove("show-menu");
+  
+  // Revert the hamburger icon
+  const navToggle = document.getElementById("nav-toggle");
+  if (navToggle) {
+    const icon = navToggle.querySelector("i");
+    if (icon) {
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
+    }
+  }
 }
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
-/*======================= ACCORD SKILLS ======================*/
-
-const skillsContent = document.getElementsByClassName("skills__content"),
-  skillsHeader = document.querySelectorAll(".skills__header");
-
-function toggleSkills() {
-  let itemClass = this.parentNode.className;
-
-  for (i = 0; i < skillsContent.length; i++) {
-    skillsContent[i].className = "skills__content skills__close";
-  }
-  if (itemClass === "skills__content skills__close") {
-    this.parentNode.className = "skills__content skills__open";
-  }
-}
-
-skillsHeader.forEach((el) => {
-  el.addEventListener("click", toggleSkills);
-});
-
-/*============== Qualification Skills ===============*/
-
-/*const tabs = document.querySelectorAll('[data-target]'),
-      tabContents = document.querySelectorAll('[data-content]')
-tabs.forEach(tab =>{
-    tab.addEventListener('click', () =>{
-        const target = document.querySelector(tab.dataset.target)
-        tabContents.forEach(tabContent =>{
-            tabContent.classList.remove('qualification__active')
-        })
-        target.classList.add('qualification__active')
-        tab.forEach(tab =>{
-            tab.classList.remove('qualification__active')
-        })
-        tab.classList.add('qualification__active')
-    })
-})      
-*/
-
-/*======================= Services Modal ===================*/
-const modalViews = document.querySelectorAll(".services__modal"),
-  modalBtns = document.querySelectorAll(".services__button"),
-  modalCloses = document.querySelectorAll(".services__modal-close");
-
-let modal = function (modalClick) {
-  modalViews[modalClick].classList.add("active-modal");
-};
-
-modalBtns.forEach((modalBtn, i) => {
-  modalBtn.addEventListener("click", () => {
-    modal(i);
-  });
-});
-
-modalCloses.forEach((modalClose) => {
-  modalClose.addEventListener("click", () => {
-    modalViews.forEach((modalView) => {
-      modalView.classList.remove("active-modal");
-    });
-  });
-});
-
-/*======================= Portfolio Swiper ===================*/
-var swiper = new Swiper(".portfolio__container", {
-  cssMode: true,
-  loop: true,
-
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
-
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+// Highlight Active Link on Scroll
 const sections = document.querySelectorAll("section[id]");
 
 function scrollActive() {
@@ -108,82 +47,95 @@ function scrollActive() {
 
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 50;
-    sectionId = current.getAttribute("id");
+    const sectionTop = current.offsetTop - 100;
+    const sectionId = current.getAttribute("id");
 
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      document
-        .querySelector(".nav__menu a[href*=" + sectionId + "]")
-        .classList.add("active-link");
-    } else {
-      document
-        .querySelector(".nav__menu a[href*=" + sectionId + "]")
-        .classList.remove("active-link");
+    const link = document.querySelector('.nav__list a[href*=' + sectionId + ']');
+    if (link) {
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        link.classList.add("active-link");
+      } else {
+        link.classList.remove("active-link");
+      }
     }
   });
 }
 window.addEventListener("scroll", scrollActive);
 
-/*==================== CHANGE BACKGROUND HEADER ====================*/
+// Change Header Background on Scroll
 function scrollHeader() {
   const nav = document.getElementById("header");
-  // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
   if (this.scrollY >= 80) nav.classList.add("scroll-header");
   else nav.classList.remove("scroll-header");
 }
 window.addEventListener("scroll", scrollHeader);
 
-/*==================== SHOW SCROLL up ====================*/
+// Show/Hide Scroll-to-Top Button
 function scrollUp() {
   const scrollUp = document.getElementById("scroll-up");
-  // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
   if (this.scrollY >= 560) scrollUp.classList.add("show-scroll");
   else scrollUp.classList.remove("show-scroll");
 }
 window.addEventListener("scroll", scrollUp);
 
-/*==================== DARK LIGHT THEME ====================*/
+// Theme Toggle (Dark/Light)
 const themeButton = document.getElementById("theme-button");
-const darkTheme = "dark-theme";
-const iconTheme = "uil-sun";
+const lightTheme = "light-theme";
 
-// Previously selected topic (if user selected)
-const selectedTheme = localStorage.getItem("selected-theme");
-const selectedIcon = localStorage.getItem("selected-icon");
+// Automatically set to dark theme on entry as requested
+document.body.classList.remove(lightTheme);
+themeButton.classList.remove("fa-sun");
+themeButton.classList.add("fa-moon");
+localStorage.setItem("selected-theme", "dark");
+localStorage.setItem("selected-icon", "fa-moon");
 
-// We obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme = () =>
-  document.body.classList.contains(darkTheme) ? "dark" : "light";
-const getCurrentIcon = () =>
-  themeButton.classList.contains(iconTheme) ? "uil-moon" : "uil-sun";
+// Get current theme and icon from DOM
+const getCurrentTheme = () => document.body.classList.contains(lightTheme) ? "light" : "dark";
+const getCurrentIcon = () => themeButton.classList.contains("fa-sun") ? "fa-sun" : "fa-moon";
 
-// We validate if the user previously chose a topic
-if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-  document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
-    darkTheme,
-  );
-  themeButton.classList[selectedIcon === "uil-moon" ? "add" : "remove"](
-    iconTheme,
-  );
-}
-
-// Activate / deactivate the theme manually with the button
+// Manually toggle theme via button
 themeButton.addEventListener("click", () => {
-  // Add or remove the dark / icon theme
-  document.body.classList.toggle(darkTheme);
-  themeButton.classList.toggle(iconTheme);
-  // We save the theme and the current icon that the user chose
+  // Toggle the light theme class
+  document.body.classList.toggle(lightTheme);
+  
+  // Toggle the icon classes correctly
+  if (document.body.classList.contains(lightTheme)) {
+    themeButton.classList.remove("fa-moon");
+    themeButton.classList.add("fa-sun");
+  } else {
+    themeButton.classList.remove("fa-sun");
+    themeButton.classList.add("fa-moon");
+  }
+  
+  // Save the theme and icon selection
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-anchor.addEventListener("click", function (e) {
-e.preventDefault();
 
-document.querySelector(this.getAttribute("href"))
-.scrollIntoView({
-behavior: "smooth"
-});
-});
+// Smooth Scrolling for Anchors
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    
+    // Forcefully close mobile menu whenever any anchor link is tapped!
+    const navMenu = document.getElementById("nav-menu");
+    if (navMenu && navMenu.classList.contains("show-menu")) {
+      navMenu.classList.remove("show-menu");
+      const navToggle = document.getElementById("nav-toggle");
+      if (navToggle) {
+        const icon = navToggle.querySelector("i");
+        if (icon) {
+          icon.classList.remove("fa-xmark");
+          icon.classList.add("fa-bars");
+        }
+      }
+    }
+
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  });
 });

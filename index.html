@@ -1,777 +1,315 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="assets/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="assets/newcss.css" />
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
-    />
-  </head>
 
-  <body oncontextmenu="return false">
-    <header class="header" id="header">
-      <nav class="nav container">
-        <a href="#" class="nav__logo">Durga Akhil</a>
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list grid">
-            <li class="nav__item">
-              <a href="#home" class="nav__link active-link">
-                <i class="uil uil-estate nav__icon"></i>Home
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#about" class="nav__link">
-                <i class="uil uil-user nav__icon"></i>About
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#skills" class="nav__link">
-                <i class="uil uil-file-alt nav__icon"></i>Skills
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#qualification" class="nav__link">
-                <i class="uil uil-briefcase-alt nav__icon"></i>Qualification
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#portfolio" class="nav__link">
-                <i class="uil uil-scenery nav__icon"></i>Projects
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#contact" class="nav__link">
-                <i class="uil uil-message nav__icon"></i>Contact-Me
-              </a>
-            </li>
-          </ul>
-          <i class="uil uil-times nav__close" id="nav-close"></i>
-        </div>
-        <div class="nav__btns">
-          <!-- Theme change button -->
-          <i class="uil uil-moon change-theme" id="theme-button"></i>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Durga Akhil - Unique Portfolio</title>
 
-          <div class="nav__toggle" id="nav-toggle">
-            <i class="uil uil-apps"></i>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <!-- main-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/newcss.css" />
+</head>
 
-    <main class="main">
-      <!--========================= Home =====================-->
+<body class="dark-theme">
 
-      <section class="home section" id="home">
-        <div class="home__container container grid">
-          <div class="home__content grid">
-            <div class="home__social">
-              <a
-                href="www.linkedin.com/in/d-durga-akhil112"
-                target="_blank"
-                class="home__social-icon"
-              >
-                <i class="uil uil-linkedin-alt home__icon"></i>
-              </a>
+  <!-- Ambient Background Orbs -->
+  <div class="ambient-orb orb-cyan"></div>
+  <div class="ambient-orb orb-magenta"></div>
 
-              <a
-                href="https://github.com/ddurgaakhil22"
-                target="_blank"
-                class="home__social-icon"
-              >
-                <i class="uil uil-github-alt home__icon"></i>
-              </a>
-            </div>
-            <div class="home__img">
-              <svg
-                class="home__blob"
-                viewBox="0 0 200 187"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-              >
-                <mask id="mask0" mask-type="alpha">
-                  <path
-                    d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                      130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                      97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                      0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
-                  />
-                </mask>
-                <g mask="url(#mask0)">
-                  <path
-                    d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                      165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                      129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                     -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
-                  />
-                  <image
-                    class="home__blob-img"
-                    x="-79"
-                    y="-35"
-                    xlink:href="images/akhil-22.jpg"
-                  />
-                </g>
-              </svg>
-            </div>
-            <div class="home__data">
-              <h1 class="home__title">Hi, I'm Durga Akhil</h1>
-              <h3 class="home__subtitle">
-                Computer Science Engineering Student
-              </h3>
-              <p class="home__description">
-                Aspiring Full Stack Developer skilled in Python, HTML, CSS and JavaScript. 
-I love building useful web applications and learning new technologies.
-              </p>
-              <a href="#contact" class="button button--flex">
-                Contact me<i class="uil uil-message button__icon"></i>
-              </a>
-            </div>
-          </div>
+  <div class="container">
+    <!-- Header & Navigation -->
+    <header id="header">
+      <div class="container">
+        <!-- Logo on the LEFT -->
+        <a href="#" class="logo" style="display:flex; align-items:center;">
+          <img src="images/page_icon.png" alt="DA Logo"
+            style="width: 100px; height: auto; object-fit: contain; margin-top: 5px;"
+            onerror="this.src='https://placehold.co/100x40/15162c/fff?text=DA.'" />
+        </a>
 
-          <div class="home__scroll">
-            <a href="#about" class="home__scroll-button button--flex">
-              <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-              <span class="home__scroll-name">Scroll down</span>
-              <i class="uil uil-arrow-down home__scroll-arrow"></i>
-            </a>
-          </div>
-        </div>
-      </section>
+        <!-- Nav Controls and Links on the RIGHT -->
+        <div class="nav-right" style="display: flex; align-items: center; gap: 3rem;">
+          <nav id="nav-menu">
+            <ul class="nav__list">
+              <li><a href="#home" class="nav__link active-link">Home</a></li>
+              <li><a href="#about" class="nav__link">About</a></li>
+              <li><a href="#skills" class="nav__link">Skills</a></li>
+              <li><a href="#qualification" class="nav__link">Qualification</a></li>
+              <li><a href="#projects" class="nav__link">Projects</a></li>
+              <li><a href="#contact" class="nav__link">Contact-Me</a></li>
+            </ul>
+            <i class="fa-solid fa-xmark nav__close" id="nav-close"></i>
+          </nav>
 
-      <!--======================= About========================-->
-
-      <section class="about section" id="about">
-        <h2 class="section__title">About Me</h2>
-        <span class="section__subtitle">My introduction</span>
-
-        <div class="about__container container grid">
-          <img src="assets\img\about.jpg" alt="" class="about__img" />
-
-          <div class="about__data">
-            <p class="about__description">
-              I am a second year B.Tech Computer Science student passionate about 
-software development and web technologies. I enjoy building projects 
-like Virtual Assistant, AI Chatbot, Password Generator and Web Apps.
-My goal is to become a skilled Full Stack Developer.</p>
-
-            <div class="about__info">
-              <div>
-                <span class="about__info-title">8.1</span>
-                <span class="about__info-name">Aggregate <br />CGPA</span>
-              </div>
-
-              <div>
-                <span class="about__info-title">04+</span>
-                <span class="about__info-name"
-                  >
-                  Projects</span
-                >
-              </div>
-
-              <div>
-                <span class="about__info-title">01+</span>
-                <span class="about__info-name">Months <br />experience</span>
-              </div>
-            </div>
-
-            <div class="about__buttons">
-              <a download="" href="assets\MyCV.pdf" class="button button--flex">
-                Download CV<i class="fas fa-download button__icon"></i>
-              </a>
+          <div class="nav-controls" style="display: flex; align-items: center; gap: 1.5rem;">
+            <i class="fa-solid fa-moon change-theme" id="theme-button"></i>
+            <div class="nav__toggle" id="nav-toggle">
+              <i class="fa-solid fa-bars"></i>
             </div>
           </div>
         </div>
-      </section>
-
-      <!--===================== SKILLS =====================-->
-
-      <section class="skills section" id="skills">
-        <h2 class="section__title">Skills</h2>
-        <span class="section__subtitle">My technical level</span>
-
-        <div class="skills__container container grid">
-          <div>
-            <!--==================== Skill 1 =================-->
-            <div class="skills__content skills__open">
-              <div class="skills__header">
-                <i class="fas fa-pencil-ruler skills__icon"></i>
-
-                <div>
-                  <h1 class="skills__title">Programming Languages</h1>
-                </div>
-
-                <i class="uil uil-angle-down skills__arrow"></i>
-              </div>
-              
-
-              <div class="skills__list grid">
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">C</h3>
-                  </div>
-                  
-                </div>
-                
-                  <div class="skills__data">
-                    <div class="skills__titles">
-                      <h3 class="skills__name">Java</h3>
-                    </div>
-                    
-                  </div>
-                  <div class="skills__data">
-                    <div class="skills__titles">
-                      <h3 class="skills__name">JavaScript</h3>
-                    </div>
-                    
-                  </div>
-                  <div class="skills__data">
-                    <div class="skills__titles">
-                      <h3 class="skills__name">Python</h3>
-                    </div>
-                   
-                
-                </div>
-                
-                
-              </div>
-            </div>
-
-            <!--==================== Skill 2 =================-->
-            <div class="skills__content skills__close">
-              <div class="skills__header">
-                <i class="fas fa-code skills__icon"></i>
-
-                <div>
-                  <h1 class="skills__title">IT Constructs</h1>
-                </div>
-
-                <i class="uil uil-angle-down skills__arrow"></i>
-              </div>
-
-              <div class="skills__list grid">
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">DBMS</h3>
-                  </div>
-                  
-                </div>
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">DS & Algorithms</h3>
-                  </div>
-                  
-                </div>
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">OOP</h3>
-                  </div>
-                  
-                </div>
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">OS</h3>
-                  </div>
-                  
-                </div>
-                
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <!--==================== Skill 3 =================-->
-            <div class="skills__content skills__close">
-              <div class="skills__header">
-                <i class="fas fa-swatchbook skills__icon"></i>
-                <div>
-                  <h1 class="skills__title">Technologies</h1>
-                </div>
-
-                <i class="uil uil-angle-down skills__arrow"></i>
-              </div>
-
-              <div class="skills__list grid">
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Git</h3>
-                  </div>
-                  
-               
-                  
-                </div>
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">MySQL</h3>
-                  </div>
-                
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!--==================== Qualifications ==================-->
-
-      <section
-        class="qualification__section service__section"
-        id="qualification"
-      >
-        <h2 class="section__title">Qualification</h2>
-        <span class="section__subtitle">My personal journey</span>
-
-        <div
-          class="qualification__container container grid services__container"
-        >
-          <div class="qualification__tabs">
-            <div
-              class="qualification__button button--flex qualification__active"
-              data-target="#education"
-            >
-              <i class="uil uil-graduation-cap qualification__icon"></i>
-              Education
-            </div>
-          </div>
-
-          <div class="qualification__sections">
-            <!--====== Qualification Content 1 ======-->
-            <div
-              class="qualification__content qualifiation__active services__content"
-              data-content
-              id="education"
-            >
-              <!--====== Qualification 1 ======-->
-              <div class="qualification__data">
-                <div>
-                  <h3 class="qualification__title">SSC</h3>
-                  <span class="qualification__subtitle"
-                    >Krishnaveni Talent<br />High School, Bandlaguda Jagir.</span
-                  >
-                  <div class="qualification__calender">
-                    <i class="uil uil-calendar-alt"></i>
-                    - 2022
-                  </div>
-                  <span
-                    class="button button--flex button--small button--link services__button"
-                  >
-                    View More
-                    <i class="uil uil-arrow-right button__icon"></i>
-                  </span>
-                  <div class="services__modal">
-                    <div class="services__modal-content">
-                      <h4 class="services__modal-title">
-                        Class 10th Summary :
-                      </h4>
-                      <i class="uil uil-times services__modal-close"></i>
-                      <ul class="services__modal-services grid">
-                        <li class="services__modal-service">
-                          <i
-                            class="uil uil-check-circle services__moda-icon"
-                          ></i>
-                          <p>
-                            Subjects studied: physics,chemistry, Maths, English,
-                            Social Studies,Telugu,Hindi.
-                          </p>
-                        </li>
-                        <li class="services__modal-service">
-                          <i
-                            class="uil uil-check-circle services__moda-icon"
-                          ></i>
-                          <p>Scored 92%</p>
-                        </li>
-                        <li class="services__modal-service">
-                          <i
-                            class="uil uil-check-circle services__moda-icon"
-                          ></i>
-                          <p>participated in few science fair projects.</p>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <span class="qualification__rounder"></span>
-                  <span class="qualification__line"></span>
-                </div>
-              </div>
-
-              <!--====== Qualification 2 ======-->
-              <div class="qualification__data">
-                <div></div>
-
-                <div>
-                  <span class="qualification__rounder"></span>
-                  <span class="qualification__line"></span>
-                </div>
-                <div>
-                  <h3 class="qualification__title">Class 12th</h3>
-                  <span class="qualification__subtitle"
-                    > Sri Chaitanya<br />Junior College</span
-                  >
-                  <div class="qualification__calender">
-                    <i class="uil uil-calendar-alt"></i>
-                    - 2024
-                  </div>
-                  <span
-                    class="button button--flex button--small button--link services__button"
-                  >
-                    View More
-                    <i class="uil uil-arrow-right button__icon"></i>
-                  </span>
-                  <div class="services__modal">
-                    <div class="services__modal-content">
-                      <h4 class="services__modal-title">
-                        Class 12th Summary :
-                      </h4>
-                      <i class="uil uil-times services__modal-close"></i>
-                      <ul class="services__modal-services grid">
-                        <li class="services__modal-service">
-                          <i
-                            class="uil uil-check-circle services__moda-icon"
-                          ></i>
-                          <p>
-                            Subjects studied: Physics, Chemistry, Maths,
-                            English, Sanskrit.
-                          </p>
-                        </li>
-                        <li class="services__modal-service">
-                          <i
-                            class="uil uil-check-circle services__moda-icon"
-                          ></i>
-                          <p>Scored 92.8%</p>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!--====== Qualification 3 ======-->
-              <div class="qualification__data">
-                <div>
-                  <h3 class="qualification__title">B-Tech College</h3>
-                  <span class="qualification__subtitle"
-                    >Global Institute of Engineering <br/> and Technology, Hyderabad</span
-                  >
-                  <div class="qualification__calender">
-                    <i class="uil uil-calendar-alt"></i>
-                    2025 - 2028
-                  </div>
-                  <span
-                    class="button button--flex button--small button--link services__button"
-                  >
-                    View More
-                    <i class="uil uil-arrow-right button__icon"></i>
-                  </span>
-                  <div class="services__modal">
-                    <div class="services__modal-content">
-                      <h4 class="services__modal-title">College Summary :</h4>
-                      <i class="uil uil-times services__modal-close"></i>
-                      <ul class="services__modal-services grid">
-                        <li class="services__modal-service">
-                          <i
-                            class="uil uil-check-circle services__modal-icon"
-                          ></i>
-                          <p>
-                            Studying core subjects of CSE including DSA,DBMS,Operating
-                            systems,Computer networks and Computer architecture .
-                          </p>
-                        </li>
-                        <li class="services__modal-service">
-                          <i
-                            class="uil uil-check-circle services__modal-icon"
-                          ></i>
-                          <p>Scored an aggregate of 8.1 CGPA till now.</p>
-                        </li>
-                        
-                        
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <span class="qualification__rounder"></span>
-                  <!--<span class="qualification__line"></span>-->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!--=================== Portfolio ===================-->
-      <section class="portfolio section" id="portfolio">
-        <h2 class="section__title">Projects</h2>
-        <span class="section__subtitle">Most recent work</span>
-
-        <div class="portfolio__container container swiper-container">
-          <div class="swiper-wrapper">
-            <!-- ------------------------portfollio 1-------------------- -->
-            <div class="portfolio__content grid swiper-slide">
-              <img src="assets/img/portfolio5.png" class="portfolio__img" />
-
-              <div class="portfolio__data">
-                <h3 class="portfolio__title">
-                  Jarvis Virtual Assistant
-                </h3>
-                <p class="portfolio__description">
-                  A Python based voice assistant that can open websites, answer questions and automate tasks using speech recognition.
-                </p>
-                <a
-                  href=""
-                  class="button button--flex button--small portfolio__button"
-                >
-                  GitHub Repository
-                  <i class="uil uil-external-link-alt button__icon"></i>
-                </a>
-               
-              </div>
-            </div>
-            <!-- ------------------------portfollio 2-------------------- -->
-
-            <div class="portfolio__content grid swiper-slide">
-              <img src="assets/img/portfolio1.png" class="portfolio__img" />
-
-              <div class="portfolio__data">
-                <h3 class="portfolio__title">
-                  Responsive-Weather-Forecast-Website
-                </h3>
-                <p class="portfolio__description">
-                  This project is a weather website that provides live weather
-                  updates and forecasts based on your location. Stay informed
-                  about current weather conditions, temperature, and more.
-                  Explore interactive maps, hourly/daily forecasts, and helpful
-                  insights. Stay ahead of the forecast and make the most of your
-                  day!
-                </p>
-                <a
-                  href="https://github.com/ddurgaakhil22/Weather-app-API-project"
-                  class="button button--flex button--small portfolio__button"
-                >
-                  GitHub Repository
-                  <i class="uil uil-external-link-alt button__icon"></i>
-                </a>
-                <a
-                  href="https://ddurgaakhil22.github.io/Weather-app-API-project/"
-                  class="button button--flex button--small portfolio__button"
-                >
-                  See Live
-                  <i class="uil uil-external-link-alt button__icon"></i>
-                </a>
-              </div>
-            </div>
-
-            <!-- ------------------------portfollio 3-------------------- -->
-            <div class="portfolio__content grid swiper-slide">
-              <img src="assets/img/portfolio2.png" class="portfolio__img" />
-
-              <div class="portfolio__data">
-                <h3 class="portfolio__title">PassForge Password Generator</h3>
-                <p class="portfolio__description">
-                 A modern password generator with options like length control, 
-symbols, uppercase, numbers and password export feature.
-                </p>
-                <a
-                  href="https://github.com/ddurgaakhil22/passforge-password-generator"
-                  class="button button--flex button--small portfolio__button"
-                >
-                  GitHub Repository
-                  <i class="uil uil-external-link-alt button__icon"></i>
-                </a>
-                <a
-                  href="https://ddurgaakhil22.github.io/passforge-password-generator/"
-                  class="button button--flex button--small portfolio__button"
-                >
-                  See Live
-                  <i class="uil uil-external-link-alt button__icon"></i>
-                </a>
-              </div>
-            </div>
-           
-
-            <!-- ------------------------portfollio 4-------------------- -->
-            <div class="portfolio__content grid swiper-slide">
-              <img src="assets/img/portfolio4.png" class="portfolio__img" />
-
-              <div class="portfolio__data">
-                <h3 class="portfolio__title">Portfolio</h3>
-                <p class="portfolio__description">
-                 A personal portfolio website designed to showcase my skills, projects, and contact information. 
-Built using HTML, CSS, JavaScript and for a responsive and interactive user interface took help of ai tools like chatgpt.etc.. .
-The website highlights my development work and serves as a professional platform to present my projects.
-                </p>
-                <a
-                  href=""
-                  class="button button--flex button--small portfolio__button"
-                >
-                  GitHub Repository
-                  <i class="uil uil-external-link-alt button__icon"></i>
-                </a>
-                <a
-                  href=""
-                  class="button button--flex button--small portfolio__button"
-                >
-                  See Live
-                  <i class="uil uil-external-link-alt button__icon"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- add arrows -->
-          <div class="swiper-button-next">
-            <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-          </div>
-          <div class="swiper-button-prev">
-            <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-          </div>
-          <!-- add pagination -->
-          <div class="swiper-pagination"></div>
-        </div>
-      </section>
-
-      <!--===================== Contact Me =====================-->
-      <section class="contact section" id="contact">
-        <h2 class="section__title">Contact Me</h2>
-        <span class="section__subtitle">Get in touch</span>
-
-        <div class="contact__container container grid">
-          <div>
-            <div class="contact__information">
-              <i class="uil uil-calling contact__icon"></i>
-
-              <div>
-                <h3 class="contact__title">Contact Me</h3>
-                <span class="contact__subtitle"
-                  ><a href="tel:9849657534"></a>9849657534</span
-                >
-              </div>
-            </div>
-
-            <div class="contact__information">
-              <i class="uil uil-envelope-minus contact__icon"></i>
-
-              <div>
-                <h3 class="contact__title">Email</h3>
-                <span class="contact__subtitle"
-                  >d.durgaakhil22@gmail.com</span
-                >
-              </div>
-            </div>
-
-            <div class="contact__information">
-              <i class="uil uil-map-marker contact__icon"></i>
-
-              <div>
-                <h3 class="contact__title">Location</h3>
-                <span class="contact__subtitle"
-                  >Hyderabad, Telangana, India</span
-                >
-              </div>
-            </div>
-          </div>
-
-          <form action="" class="contact__form grid">
-            <div class="contact__inputs grid">
-              <div class="contact__content">
-                <label for="" class="content__label">Name</label>
-                <input type="text" class="contact__input" />
-              </div>
-
-              <div class="contact__content">
-                <label for="" class="content__label">Email</label>
-                <input type="Email" class="contact__input" />
-              </div>
-            </div>
-
-            <div class="contact__content">
-              <label for="" class="content__label">Message</label>
-              <textarea
-                name=""
-                id=""
-                cols="0"
-                rows="7"
-                class="contact__input"
-              ></textarea>
-            </div>
-
-            <div>
-              <a
-                href=" mailto: d.durgaakhil22@gmail.com?subject=Testing out mailto! &body=This is only a test!"
-                class="button button--flex"
-              >
-                Send Message
-                <i class="uil uil-message button__icon"></i>
-              </a>
-            </div>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <!--================== Footer ===============-->
-    <footer class="footer">
-      <div class="footer__bg">
-        <div class="footer__container container grid">
-          <div>
-            <h1 class="footer__title">Durga Akhil</h1>
-            <span class="footer__subtitle"
-              >Computer Science Engineering Student</span
-            >
-          </div>
-
-          <ul class="footer__links">
-            <li>
-              <a href="#qualification" class="footer__link">Qualification</a>
-            </li>
-            <li>
-              <a href="#portfolio" class="footer__link">Projects</a>
-            </li>
-            <li>
-              <a href="#contact" class="footer__link">Contact-Me</a>
-            </li>
-          </ul>
-
-          <div class="footer__socials">
-            <a
-              href="https://www.instagram.com/d_akhil_112/"
-              class="footer__social"
-              target="__blank"
-            >
-            <i class="fa-brands fa-instagram"></i>
-            </a>
-
-            <a
-              href=""
-              target="__blank"
-              class="footer__social"
-            >
-            <i class="fa-brands fa-x-twitter"></i>
-            </a>
-          </div>
-        </div>
-
-        <p class="footer__copy">&#169; Durga Akhil. All right reserved</p>
       </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 class="name" data-text="Durga Akhil">Hi, I'm <br>Durga Akhil</h1>
+        <h2 class="subtitle">Aspiring Full-Stack Developer</h2>
+
+        <p class="location">
+          <i class="fa-solid fa-location-crosshairs"></i> Hyderabad, India
+        </p>
+
+        <p class="bio">
+         I’m a Computer Science student interested in building responsive web applications and learning new technologies. I enjoy improving my skills and turning ideas into real projects.
+        </p>
+
+        <!-- Only Contact Me Button -->
+        <div class="btn-group">
+          <a href="#contact" class="btn btn-neon">Contact me</a>
+        </div>
+
+        <!-- Social Icons Left side below button -->
+        <div class="social-links" style="display: flex; gap: 1rem; justify-content: flex-start;">
+          <a href="https://github.com/ddurgaakhil22" target="_blank" class="social-icon"><i
+              class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/d-durga-akhil112" target="_blank" class="social-icon"><i
+              class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- Unique Orbit Animation Image -->
+      <div class="hero-image-wrapper">
+        <div class="orbit-system">
+          <div class="orbit ring-1">
+            <div class="planet planet-js"><i class="fa-brands fa-js"></i></div>
+            <div class="planet planet-git"><i class="fa-brands fa-git-alt"></i></div>
+          </div>
+          <div class="orbit ring-2">
+            <div class="planet planet-html"><i class="fa-brands fa-html5"></i></div>
+            <div class="planet planet-css"><i class="fa-brands fa-css3-alt"></i></div>
+          </div>
+          <div class="orbit ring-3">
+            <div class="planet planet-python"><i class="fa-brands fa-python"></i></div>
+            <div class="planet planet-github"><i class="fa-brands fa-github"></i></div>
+          </div>
+          <div class="center-core">
+            <img src="images/akhil_pic.png" alt="Durga Akhil" onerror="this.src='assets/img/about.jpg'" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="section-heading">
+        <h2 class="section-title">About Me</h2>
+        <div class="heading-line"></div>
+      </div>
+      <p class="section-subtitle">A brief introduction about me</p>
+
+      <div class="about-glass"
+        style="max-width: 900px; margin: 0 auto; background: var(--glass-bg); border: 1px solid var(--glass-border); backdrop-filter: blur(8px); border-radius: 12px; padding: 3rem; display: flex; flex-direction: column; gap: 2rem;">
+        <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.8;">
+        I’m someone who enjoys understanding how ideas turn into real applications. As a Computer Science student, I’ve been exploring web development step by step, building projects and learning through experience.
+        </p>
+        <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.8;">
+        What interests me most is creating simple, clean, and interactive user interfaces. I’m currently focused on improving my frontend skills and gaining practical knowledge by working on real projects. For me, growth comes from consistency, curiosity, and the willingness to keep learning every day.
+        </p>
+        <div style="margin-top: 1rem;">
+          <a href="assets/MyCV.pdf" target="_blank" download class="btn btn-glass"
+            style="display:inline-block; padding: 0.8rem 1.5rem; text-decoration: none; font-family: var(--font-tech); font-weight: 600; text-transform: uppercase;">View Resume<i class="fa-solid fa-download" style="margin-left: 0.5rem; color: var(--magenta);"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="section-heading">
+        <h2 class="section-title">SKILLS</h2>
+        <div class="heading-line"></div>
+      </div>
+      <p class="section-subtitle">Core languages and architecture tools.</p>
+
+      <div class="skills-grid">
+        <div class="skill-glass"><i class="fa-brands fa-python skill-icon"></i> Python core</div>
+        <div class="skill-glass"><i class="fa-solid fa-c skill-icon"></i> C</div>
+        <div class="skill-glass"><i class="fa-brands fa-java skill-icon"></i> Java OOP</div>
+        <div class="skill-glass"><i class="fa-brands fa-js skill-icon"></i> JS</div>
+        <div class="skill-glass"><i class="fa-brands fa-html5 skill-icon"></i> HTML5</div>
+        <div class="skill-glass"><i class="fa-brands fa-css3 skill-icon"></i> CSS3</div>
+        <div class="skill-glass"><i class="fa-solid fa-database skill-icon"></i> SQL</div>
+        <div class="skill-glass"><i class="fa-brands fa-git-alt skill-icon"></i> Git Versioning</div>
+        <div class="skill-glass"><i class="fa-brands fa-github skill-icon"></i> GitHub</div>
+        <div class="skill-glass"><i class="fa-solid fa-sitemap skill-icon"></i> Data Structures</div>
+        <div class="skill-glass"><i class="fa-solid fa-brain skill-icon"></i> Problem Solving</div>
+      </div>
+    </section>
+
+    <!-- Qualification Section -->
+    <section id="qualification" class="qualification">
+      <div class="section-heading">
+        <h2 class="section-title">Qualification</h2>
+        <div class="heading-line"></div>
+      </div>
+      <p class="section-subtitle">My academic trajectory.</p>
+
+      <div class="qual-glass">
+        <!-- Item 1 -->
+        <div class="qual-data">
+          <div>
+            <h3 class="qual-title">SSC</h3>
+            <span class="qual-subtitle">Krishnaveni Talent High School</span>
+            <div class="qual-calendar"><i class="fa-regular fa-calendar"></i> Graduated 2022</div>
+          </div>
+          <div>
+            <span class="qual-rounder"></span>
+            <span class="qual-line"></span>
+          </div>
+          <div></div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="qual-data">
+          <div></div>
+          <div>
+            <span class="qual-rounder"></span>
+            <span class="qual-line"></span>
+          </div>
+          <div>
+            <h3 class="qual-title">Class 12th</h3>
+            <span class="qual-subtitle">Sri Chaitanya Junior College</span>
+            <div class="qual-calendar"><i class="fa-regular fa-calendar"></i> Graduated 2024</div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="qual-data">
+          <div>
+            <h3 class="qual-title">B-Tech College</h3>
+            <span class="qual-subtitle">Global Institute of Engineering</span>
+            <div class="qual-calendar"><i class="fa-regular fa-calendar"></i> 2025 - 2028</div>
+          </div>
+          <div>
+            <span class="qual-rounder"></span>
+          </div>
+          <div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="section-heading">
+        <h2 class="section-title">PROJECTS</h2>
+        <div class="heading-line"></div>
+      </div>
+      <p class="section-subtitle">Check out my recent builds.</p>
+
+      <div class="projects-grid">
+        <article class="project-glass-card">
+          <div class="project-img-wrapper">
+            <img src="assets/img/portfolio5.png" alt="Jarvis AI" class="project-img"
+              onerror="this.src='https://placehold.co/600x400/1e293b/fff?text=Jarvis+AI'" />
+            <div class="overlay-glow"></div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Jarvis Voice Assistant</h3>
+            <p class="project-desc">A simple Python-based voice assistant that can perform basic tasks like opening applications and responding to voice commands.</p>
+            <div class="project-links">
+              <a href="https://github.com/ddurgaakhil22/jarvis-virtual-assistant.git" class="project-link"><i class="fa-brands fa-github"></i> Source</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-glass-card">
+          <div class="project-img-wrapper">
+            <img src="assets/img/portfolio1.png" alt="Weather AI" class="project-img"
+              onerror="this.src='https://placehold.co/600x400/1e293b/fff?text=Weather+Now'" />
+            <div class="overlay-glow"></div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Live Weather Report</h3>
+            <p class="project-desc">A responsive weather application that fetches real-time data using an API and displays temperature and conditions based on user location.</p>
+            <div class="project-links">
+              <a href="https://github.com/ddurgaakhil22/Weather_now-project.git" target="_blank" class="project-link"><i
+                  class="fa-brands fa-github"></i> Source</a>
+              <a href="https://ddurgaakhil22.github.io/Weather_now-project/" target="_blank" class="project-link"><i
+                  class="fa-solid fa-satellite-dish"></i> Deploy</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-glass-card">
+          <div class="project-img-wrapper">
+            <img src="assets/img/portfolio2.png" alt="PassForge" class="project-img"
+              onerror="this.src='https://placehold.co/600x400/1e293b/fff?text=PassForge'" />
+            <div class="overlay-glow"></div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Password Generator</h3>
+            <p class="project-desc">A JavaScript-based tool that generates strong and secure passwords with customizable length and character options.</p>
+            <div class="project-links">
+              <a href="https://github.com/ddurgaakhil22/passforge-password-generator" target="_blank"
+                class="project-link"><i class="fa-brands fa-github"></i> Source</a>
+              <a href="https://ddurgaakhil22.github.io/passforge-password-generator/" target="_blank"
+                class="project-link"><i class="fa-solid fa-satellite-dish"></i> Deploy</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="section-heading" style="justify-content: center;">
+        <h2 class="section-title">Contact Me</h2>
+      </div>
+      <p class="section-subtitle text-center">Open to opportunities, collaborations, and learning experiences.</p>
+
+      <div class="contact-wrapper"
+        style="display:grid; grid-template-columns: repeat(2, 1fr); gap: 3rem; margin-top:2rem;">
+
+        <!-- Info Left -->
+        <div class="contact-info-glass">
+          <a href="tel:9849657534" class="contact-glass-pill" style="margin-bottom:1rem;">
+            <i class="fa-solid fa-phone"></i> +91 9849657534
+          </a>
+          <a href="mailto:d.durgaakhil22@gmail.com" class="contact-glass-pill" style="margin-bottom:1rem;">
+            <i class="fa-solid fa-envelope"></i> d.durgaakhil22@gmail.com
+          </a>
+          <div class="contact-glass-pill">
+            <i class="fa-solid fa-location-dot"></i> Hyderabad, Telangana, India
+          </div>
+        </div>
+
+        <!-- Form Right -->
+        <form action="" class="contact-form-glass">
+          <div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:1.5rem; margin-bottom:1.5rem;">
+            <input type="text" placeholder="Name" class="glass-input" />
+            <input type="email" placeholder="Email" class="glass-input" />
+          </div>
+          <textarea cols="0" rows="6" placeholder="Message" class="glass-input textarea"
+            style="width:100%; margin-bottom:1.5rem;"></textarea>
+          <div>
+            <button type="submit" class="btn btn-neon w-full">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer style="padding: 2rem 0; border-top: 1px solid var(--glass-border); margin-top:3rem;">
+      <p class="copyright-text" style="text-align:center; color:var(--text-muted); font-size:0.85rem;">&copy; 2026 Durga Akhil. Built with passion and consistency.</p>
     </footer>
 
-    <!--================== SCROLL TOP ==================-->
-    <a href="#" class="scrollup" id="scroll-up">
-      <i class="uil uil-arrow-up scrollup__icon"></i>
-    </a>
+  </div>
 
-    <script type="text/javascript" src="assets/swiper-bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/2205d59d52.js" crossorigin="anonymous"></script>
-    <script src="assets/ptj.js"></script>
-    
-  </body>
+  <a href="#" class="scrollup" id="scroll-up">
+    <i class="fa-solid fa-chevron-up scrollup__icon"></i>
+  </a>
+
+  <script src="assets/ptj.js"></script>
+</body>
+
 </html>
